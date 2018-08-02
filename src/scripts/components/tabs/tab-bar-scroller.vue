@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { MDCTabBarScroller } from '../../../material-components-web/tabs';
+import { MDCTabScroller } from '../../../material-components-web/tab-scroller';
 import tabsMixin from '../../mixins/tabs';
 import UI_TABS from './constants';
 
@@ -40,7 +40,7 @@ export default {
   },
   mounted() {
     if (!this.$tabBarScroller) {
-      this.$tabBarScroller = new MDCTabBarScroller(this.$el);
+      this.$tabBarScroller = new MDCTabScroller(this.$el);
 
       this.$tabBarScroller.tabBar.listen(
         `MDCTabBar:${UI_TABS.EVENT.CHANGE}`,
