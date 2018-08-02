@@ -1,5 +1,6 @@
 /**
- * Copyright 2017 Google Inc. All Rights Reserved.
+ * @license
+ * Copyright 2018 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,12 +15,17 @@
  * limitations under the License.
  */
 
-export const cssClasses = {
-  UPGRADED: 'mdc-tab-bar-upgraded',
+/** @enum {string} */
+const cssClasses = {
+  CHECKED: 'mdc-switch--checked',
+  DISABLED: 'mdc-switch--disabled',
 };
 
-export const strings = {
-  TAB_SELECTOR: '.mdc-tab',
-  INDICATOR_SELECTOR: '.mdc-tab-bar__indicator',
-  CHANGE_EVENT: 'MDCTabBar:change',
+/** @enum {string} */
+const strings = {
+  NATIVE_CONTROL_SELECTOR: '.mdc-switch__native-control',
+  RIPPLE_SURFACE_SELECTOR: '.mdc-switch__thumb-underlay',
 };
+
+
+export {cssClasses, strings};
