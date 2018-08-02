@@ -30,6 +30,10 @@ var level1 = [
   'slider',
   'snackbar',
   'switch',
+  'tab',
+  'tab-bar',
+  'tab-indicator',
+  'tab-scroller',
   'textfield',
   'toolbar',
   'top-app-bar'
@@ -41,9 +45,9 @@ var level2 = [
   'drawer/persistent',
   'drawer/slidable',
   'drawer/temporary',
-  'tabs/tab',
-  'tabs/tab-bar',
-  'tabs/tab-bar-scroller',
+  // 'tabs/tab',
+  // 'tabs/tab-bar',
+  // 'tabs/tab-bar-scroller',
   'textfield/helper-text',
   'textfield/icon'
 ];
