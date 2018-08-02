@@ -1,16 +1,14 @@
 <template>
   <div class="demo--list">
     <section class="hero component">
-      <ui-list twoLine avatar ripple class="demo-list demo-list--with-avatars">
+      <ui-list twoLine avatar ripple singleSelection class="demo-list demo-list--with-avatars">
         <ui-item v-for="(item, index) in folders"
           :key="index"
           v-ripple
           :firstIcon="item.first"
           :lastIcon="item.last">
-          <ui-item-text>
-            {{ item.text }}
-            <ui-item-subtext>{{ item.subtext }}</ui-item-subtext>
-          </ui-item-text>
+          <ui-item-text>{{ item.text }}</ui-item-text>
+          <ui-item-subtext>{{ item.subtext }}</ui-item-subtext>
         </ui-item>
       </ui-list>
     </section>
@@ -31,10 +29,8 @@
                 :key="index"
                 :firstIcon="item.first"
                 :lastIcon="item.last">
-                <ui-item-text>
-                  {{ item.text }}
-                  <ui-item-subtext>{{ item.subtext }}</ui-item-subtext>
-                </ui-item-text>
+                <ui-item-text>{{ item.text }}</ui-item-text>
+                <ui-item-subtext>{{ item.subtext }}</ui-item-subtext>
               </ui-item>
             </ui-list>
 
@@ -46,10 +42,8 @@
                 :key="index"
                 :firstIcon="item.first"
                 :lastIcon="item.last">
-                <ui-item-text>
-                  {{ item.text }}
-                  <ui-item-subtext>{{ item.subtext }}</ui-item-subtext>
-                </ui-item-text>
+                <ui-item-text>{{ item.text }}</ui-item-text>
+                <ui-item-subtext>{{ item.subtext }}</ui-item-subtext>
               </ui-item>
             </ui-list>
           </ui-list-group>
@@ -229,10 +223,8 @@
           <h3>Text-Only</h3>
           <ui-list twoLine class="demo-list">
             <ui-item v-for="i in 3" :key="i">
-              <ui-item-text>
-                Two-line item
-                <ui-item-subtext>Secondary text</ui-item-subtext>
-              </ui-item-text>
+              <ui-item-text>Two-line item</ui-item-text>
+              <ui-item-subtext>Secondary text</ui-item-subtext>
             </ui-item>
           </ui-list>
         </section>
@@ -241,10 +233,8 @@
           <h3>Text-Only (Dense)</h3>
           <ui-list twoLine dense class="demo-list">
             <ui-item v-for="i in 3" :key="i">
-              <ui-item-text>
-                Two-line item
-                <ui-item-subtext>Secondary text</ui-item-subtext>
-              </ui-item-text>
+              <ui-item-text>Two-line item</ui-item-text>
+              <ui-item-subtext>Secondary text</ui-item-subtext>
             </ui-item>
           </ui-list>
         </section>
@@ -253,10 +243,8 @@
           <h3>Graphic</h3>
           <ui-list twoLine class="demo-list demo-list--icon-placeholders">
             <ui-item v-for="i in 3" :key="i" firstPlaceholder>
-              <ui-item-text>
-                Two-line item
-                <ui-item-subtext>Secondary text</ui-item-subtext>
-              </ui-item-text>
+              <ui-item-text>Two-line item</ui-item-text>
+              <ui-item-subtext>Secondary text</ui-item-subtext>
             </ui-item>
           </ui-list>
         </section>
@@ -269,10 +257,8 @@
           <h3>Graphic (Dense)</h3>
           <ui-list twoLine dense class="demo-list demo-list--icon-placeholders">
             <ui-item v-for="i in 3" :key="i" firstPlaceholder>
-              <ui-item-text>
-                Two-line item
-                <ui-item-subtext>Secondary text</ui-item-subtext>
-              </ui-item-text>
+              <ui-item-text>Two-line item</ui-item-text>
+              <ui-item-subtext>Secondary text</ui-item-subtext>
             </ui-item>
           </ui-list>
         </section>
@@ -281,10 +267,8 @@
           <h3>Avatar List</h3>
           <ui-list twoLine avatar class="demo-list demo-list--with-avatars demo-list--icon-placeholders">
             <ui-item v-for="i in 3" :key="i" firstPlaceholder>
-              <ui-item-text>
-                Two-line item
-                <ui-item-subtext>Secondary text</ui-item-subtext>
-              </ui-item-text>
+              <ui-item-text>Two-line item</ui-item-text>
+              <ui-item-subtext>Secondary text</ui-item-subtext>
             </ui-item>
           </ui-list>
         </section>
@@ -293,10 +277,8 @@
           <h3>Avatar List (dense)</h3>
           <ui-list twoLine dense avatar class="demo-list demo-list--with-avatars demo-list--icon-placeholders">
             <ui-item v-for="i in 3" :key="i" firstPlaceholder>
-              <ui-item-text>
-                Two-line item
-                <ui-item-subtext>Secondary text</ui-item-subtext>
-              </ui-item-text>
+              <ui-item-text>Two-line item</ui-item-text>
+              <ui-item-subtext>Secondary text</ui-item-subtext>
             </ui-item>
           </ui-list>
         </section>
@@ -307,10 +289,8 @@
             <ui-item v-for="i in 3"
               :key="i"
               :lastText="`$${i}0.00`">
-              <ui-item-text>
-                Two-line item
-                <ui-item-subtext>Secondary text</ui-item-subtext>
-              </ui-item-text>
+              <ui-item-text>Two-line item</ui-item-text>
+              <ui-item-subtext>Secondary text</ui-item-subtext>
             </ui-item>
           </ui-list>
         </section>
@@ -325,10 +305,8 @@
             <ui-item v-for="i in 3"
               :key="i"
               :lastText="`$${i}0.00`">
-              <ui-item-text>
-                Two-line item
-                <ui-item-subtext>Secondary text</ui-item-subtext>
-              </ui-item-text>
+              <ui-item-text>Two-line item</ui-item-text>
+              <ui-item-subtext>Secondary text</ui-item-subtext>
             </ui-item>
           </ui-list>
         </section>
@@ -340,10 +318,8 @@
               :key="index"
               :firstIcon="item.first"
               :lastIcon="item.last">
-              <ui-item-text>
-                {{ item.text }}
-                <ui-item-subtext>{{ item.subtext }}</ui-item-subtext>
-              </ui-item-text>
+              <ui-item-text>{{ item.text }}</ui-item-text>
+              <ui-item-subtext>{{ item.subtext }}</ui-item-subtext>
             </ui-item>
           </ui-list>
         </section>
@@ -359,10 +335,8 @@
               :key="index"
               :firstIcon="item.first"
               :lastIcon="item.last">
-              <ui-item-text>
-                {{ item.text }}
-                <ui-item-subtext>{{ item.description }}</ui-item-subtext>
-              </ui-item-text>
+              <ui-item-text>{{ item.text }}</ui-item-text>
+              <ui-item-subtext>{{ item.description }}</ui-item-subtext>
             </ui-item>
           </ui-list>
         </section>
@@ -428,10 +402,8 @@
                 :key="index"
                 :firstIcon="item.first"
                 :lastIcon="item.last">
-                <ui-item-text>
-                  {{ item.text }}
-                  <ui-item-subtext>{{ item.subtext }}</ui-item-subtext>
-                </ui-item-text>
+                <ui-item-text>{{ item.text }}</ui-item-text>
+                <ui-item-subtext>{{ item.subtext }}</ui-item-subtext>
               </ui-item>
             </ui-list>
 
@@ -443,10 +415,8 @@
                 :key="index"
                 :firstIcon="item.first"
                 :lastIcon="item.last">
-                <ui-item-text>
-                  {{ item.text }}
-                  <ui-item-subtext>{{ item.subtext }}</ui-item-subtext>
-                </ui-item-text>
+                <ui-item-text>{{ item.text }}</ui-item-text>
+                <ui-item-subtext>{{ item.subtext }}</ui-item-subtext>
               </ui-item>
             </ui-list>
           </ui-list-group>
@@ -475,7 +445,6 @@
 
     <ui-apidocs name="list"></ui-apidocs>
     <ui-apidocs name="item"></ui-apidocs>
-    <ui-apidocs name="item-text"></ui-apidocs>
     <ui-apidocs name="item-divider"></ui-apidocs>
     <ui-apidocs name="list-group"></ui-apidocs>
   </div>
