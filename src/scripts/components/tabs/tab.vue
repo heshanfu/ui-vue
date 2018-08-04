@@ -1,22 +1,24 @@
 <template>
-  <a class="mdc-tab" role="tab" @click.prevent>
-    <slot name="before"></slot>
-    <template v-if="icon">
-      <slot name="icon" :className="UI_TAB.SLOT_CLASS">
-        <i :class="['material-icons', UI_TAB.SLOT_CLASS.icon]">{{ icon }}</i>
-      </slot>
-      <span v-if="text" class="mdc-tab__icon-text">{{ text }}</span>
-    </template>
-    <template v-else>
-      <slot>{{ text }}</slot>
-    </template>
-    <slot name="after"></slot>
-  </a>
+  <button class="mdc-tab" role="tab" aria-selected="false" tabindex="-1">
+    <div class="mdc-tab__content">
+      <template v-if="icon">
+        <span class="mdc-tab__icon material-icons">{{ icon }}</span>
+      </template>
+      <span class="mdc-tab__text-label">
+        <slot>{{ text }}</slot>
+      </span>
+    </div>
+    <ui-tab-indicator></ui-tab-indicator>
+    <div class="mdc-tab__ripple"></div>
+  </button>
 </template>
 
 <script>
+import UiTabIndicator from './tab-indicator';
+import tabIndicatorMixin from '../../mixins/tab-indicator';
 import getType from '../../utils/typeof';
 
+// Define constants
 const UI_TAB = {
   SLOT_CLASS: {
     icon: 'mdc-tab__icon'
@@ -25,6 +27,10 @@ const UI_TAB = {
 
 export default {
   name: 'ui-tab',
+  components: {
+    UiTabIndicator
+  },
+  mixins: [tabIndicatorMixin],
   props: {
     // UI attributes
     text: String,

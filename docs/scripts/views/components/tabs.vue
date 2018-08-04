@@ -1,15 +1,21 @@
 <template>
   <div class="demo--tabs">
     <section class="hero component">
-      <ui-tabs id="demo-tab-bar" :items="tabs"></ui-tabs>
+      <!-- <ui-tabs id="demo-tab-bar" :items="tabs"></ui-tabs> -->
     </section>
 
-    <h3 :class="$tt('headline3')">0. Usage</h3>
+    <ui-tab-bar>
+      <ui-tab icon="phone">Item 1</ui-tab>
+      <ui-tab icon="favorite">Item 2</ui-tab>
+      <ui-tab icon="person_pin">Item 3</ui-tab>
+    </ui-tab-bar>
+
+    <!-- <h3 :class="$tt('headline3')">0. Usage</h3>
     <ui-markdown :text="code[0]"></ui-markdown>
 
-    <h3 :class="$tt('headline3')">1. Example</h3>
+    <h3 :class="$tt('headline3')">1. Example</h3> -->
 
-    <section>
+    <!-- <section>
       <fieldset>
         <legend :class="$tt('headline6')">Basic Tab Bar</legend>
         <ui-tab-bar id="basic-tab-bar">
@@ -216,12 +222,12 @@
           <ui-markdown :code="code[6]"></ui-markdown>
         </ui-accordion>
       </fieldset>
-    </section>
+    </section> -->
 
-    <h3 :class="$tt('headline3')">2. APIs</h3>
+    <!-- <h3 :class="$tt('headline3')">2. APIs</h3>
     <ui-apidocs name="tabs"></ui-apidocs>
     <ui-apidocs name="tab"></ui-apidocs>
-    <ui-apidocs name="panels"></ui-apidocs>
+    <ui-apidocs name="panels"></ui-apidocs> -->
   </div>
 </template>
 

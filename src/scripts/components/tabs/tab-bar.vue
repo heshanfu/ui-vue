@@ -1,44 +1,34 @@
 <template>
-  <nav :class="className" role="tablist">
-    <slot><!-- Tab items --></slot>
-    <span class="mdc-tab-bar__indicator"></span>
-  </nav>
+  <div class="mdc-tab-bar" role="tablist">
+    <div :class="['mdc-tab-scroller', alignClass]">
+      <div class="mdc-tab-scroller__scroll-area">
+        <div class="mdc-tab-scroller__scroll-content">
+          <slot></slot>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 import { MDCTabBar } from '../../../material-components-web/tab-bar';
-import tabsMixin from '../../mixins/tabs';
-import UI_TABS from './constants';
+import tabBarMixin from '../../mixins/tab-bar';
 
 export default {
   name: 'ui-tab-bar',
-  mixins: [tabsMixin],
+  mixins: [tabBarMixin],
   data() {
     return {
       $tabBar: null
     };
   },
-  computed: {
-    className() {
-      return {
-        'mdc-tab-bar': true,
-        'mdc-tab-bar--icon-tab-bar': this.iconOnly,
-        'mdc-tab-bar--icons-with-text': this.textWithIcon
-      };
-    }
-  },
   mounted() {
     if (!this.$tabBar) {
       this.$tabBar = new MDCTabBar(this.$el);
 
-      this.$tabBar.listen(
-        `MDCTabBar:${UI_TABS.EVENT.CHANGE}`,
-        ({ detail: tabs }) => {
-          this.handleChange(tabs.activeTabIndex);
-        }
-      );
-
-      this.$tabBar.activeTabIndex = this.active;
+      this.$tabBar.listen('MDCTabBar:activated', ({ detail: activatedTab }) => {
+        console.log(activatedTab);
+      });
     }
   }
 };
